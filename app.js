@@ -35,7 +35,7 @@ window.addEventListener('load', () => {
       console.log(position);
       console.log(long);
       console.log(lat);
-      let api = `http://api.weatherapi.com/v1/current.json?key=35f02e2b9b5d467798e130322210106&q=${lat},${long}&aqi=no`;
+      let api = `https://api.weatherapi.com/v1/current.json?key=35f02e2b9b5d467798e130322210106&q=${lat},${long}&aqi=no`;
 
       fetch(api).then(
         response => response.json()
