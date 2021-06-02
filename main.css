@@ -22,11 +22,13 @@ body {
   margin: 10vh;
   /* border: solid; */
   width: 100%;
-  justify-content: space-around;
+  /* justify-content: space-around; */
 }
 .temperature {
   flex-direction: column;
   text-align: center;
+  margin: auto;
+  /* border: solid; */
 }
 .degree-div {
   font-size: 30px;
@@ -37,8 +39,90 @@ body {
   display: flex;
   justify-content: center;
   height: 10vh;
+  margin: 0;
 }
 .degree-div span {
   font-size: 30px;
   margin: 10px;
+}
+footer {
+  bottom: 0;
+  margin: 20px;
+  position: absolute;
+}
+hr {
+  margin: 0;
+  border: solid 2px #ffffff;
+}
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+#main {
+  display: none;
+  /* border: solid; */
+  padding: 0;
+  /* text-align: center; */
 }

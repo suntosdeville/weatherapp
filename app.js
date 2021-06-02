@@ -1,4 +1,18 @@
+// var showPage;
+
+
+
+function load() {
+  setTimeout(showPage, 1000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("main").style.display = "block";
+}
+
 window.addEventListener('load', () => {
+  load()
   let long;
   let lat;
 
@@ -8,22 +22,20 @@ window.addEventListener('load', () => {
   let tmpDegree = document.getElementById('degree');
   let discribtion = document.getElementById('discribtion');
   let img = document.getElementById('img');
-  // time.textContent = "hi u are the time"
-  // country.textContent = "hi u are the time"
 
 
 
+  navigator.geolocation.getCurrentPosition(
 
-  if (navigator.geolocation) {
-
-    navigator.geolocation.getCurrentPosition(position => {
+    // Success callback
+    position => {
+      const { latitude, longitude } = position.coords;
+      long = longitude;
+      lat = latitude
       console.log(position);
-      long = position.coords.longitude;
-      long = position.coords.longitude;
-      lat = position.coords.latitude;
       console.log(long);
       console.log(lat);
-      let api = `https://api.weatherapi.com/v1/current.json?key=35f02e2b9b5d467798e130322210106&q=${lat},${long}&aqi=no`;
+      let api = `http://api.weatherapi.com/v1/current.json?key=35f02e2b9b5d467798e130322210106&q=${lat},${long}&aqi=no`;
 
       fetch(api).then(
         response => response.json()
@@ -60,11 +72,13 @@ window.addEventListener('load', () => {
       }
       )
 
+    },
+    // error
+    error => {
+      console.log(error);
+      document.getElementById("main").textContent = "Location Access denied";
 
-    })
+    }
+  );
 
-
-  } else {
-    h1.textContent = 'can no get your location';
-  }
 })
