@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
       lat = position.coords.latitude;
       console.log(long);
       console.log(lat);
-      let api = `http://api.weatherapi.com/v1/current.json?key=35f02e2b9b5d467798e130322210106&q=${lat},${long}&aqi=no`;
+      let api = `https://api.weatherapi.com/v1/current.json?key=35f02e2b9b5d467798e130322210106&q=${lat},${long}&aqi=no`;
 
       fetch(api).then(
         response => response.json()
@@ -37,7 +37,7 @@ window.addEventListener('load', () => {
         const { temp_c, temp_f, condition } = data.current;
 
 
-        tmpDegree.textContent = temp_c;
+        tmpDegree.textContent = temp_c + " C";
         discribtion.textContent = condition.text;
         console.log(country)
         console.log(condition.text)
