@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin: auto; */
+  height: 100vh;
+  align-items: center;
+  background: linear-gradient(rgb(2, 18, 238), rgb(144, 151, 248));
+  color: #ffffff;
+  /* border: rgb(0, 60, 255) solid 3px; */
+  font-family: Helvetica;
+}
+.location,
+.temperature {
+  max-width: 300px;
+  display: flex;
+  margin: 10vh;
+  /* border: solid; */
+  width: 100%;
+  justify-content: space-around;
+}
+.temperature {
+  flex-direction: column;
+  text-align: center;
+}
+.degree-div {
+  font-size: 30px;
+  /* text-align: center; */
+  /* width: 100%; */
+  /* border: solid; */
+
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+}
+.degree-div span {
+  font-size: 30px;
+  margin: 10px;
+}
