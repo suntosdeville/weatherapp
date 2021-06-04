@@ -54,7 +54,7 @@ window.addEventListener('load', () => {
 
         const btn = document.createElement("button");	// Create a new button element 
         btn.setAttribute("class", "btn btn-outline-light btn-sm"); // added bootstrap classes
-        btn.innerHTML = 'convect';// inner text
+        btn.innerHTML = 'convert';// inner text
         document.getElementById('degree-div').appendChild(btn); //added it  to the degree div container
 
         //add an onclick event 
@@ -83,7 +83,7 @@ window.addEventListener('load', () => {
       // everythign is set then start loading for 1s
       load();
       const main = document.getElementById("main");
-      main.setAttribute('style', 'height: 100vh');
+      main.setAttribute('style', 'height: 15s0vh');
       console.log(error);
       const hr = document.getElementById('hr');
       hr.style.display = 'none';
