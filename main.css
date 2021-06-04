@@ -10,7 +10,7 @@ body {
   /* margin: auto; */
   height: 100vh;
   align-items: center;
-  background: linear-gradient(rgb(2, 18, 238), rgb(144, 151, 248));
+  background: linear-gradient(rgb(144, 151, 248), rgb(2, 18, 238));
   color: #ffffff;
   /* border: rgb(0, 60, 255) solid 3px; */
   font-family: Helvetica;
@@ -36,15 +36,20 @@ body {
   /* width: 100%; */
   /* border: solid; */
 
-  display: flex;
-  justify-content: center;
-  height: 10vh;
-  margin: 0;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* height: 10vh; */
+  /* margin: 0; */
 }
-.degree-div span {
+.degree-div .degree {
+  /* border: solid; */
+  width: auto;
+  cursor: pointer;
+}
+/* .degree-div span {
   font-size: 30px;
   margin: 10px;
-}
+} */
 footer {
   bottom: 0;
   margin: 20px;
@@ -122,6 +127,7 @@ hr {
 
 #main {
   display: none;
+  height: 80vh;
   /* border: solid; */
   padding: 0;
   /* text-align: center; */
